@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+        h1 {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #1f6391;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <h1>Application Form</h1>
+
+            <label>Firstname:</label>
+            <input type="text" name="firstname" required>
+
+            <label>Lastname:</label>
+            <input type="text" name="lastname" required>
+
+            <label>Date of Birth:</label>
+            <input type="date" name="dob" required>
+
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br><br>
+
+            <label>Phone Number:</label>
+            <input type="tel" name="phone" required>
+
+            <label>Alternative Number:</label>
+            <input type="tel" name="alt_phone">
+
+            <label>Email ID:</label>
+            <input type="email" name="email" required>
+
+            <label>District:</label>
+            <input type="text" name="district" required>
+
+            <label>State:</label>
+            <input type="text" name="state" required>
+
+            <label>10th Mark:</label>
+            <input type="number" name="mark_10" min="0" max="100" required>
+
+            <label>12th Mark:</label>
+            <input type="number" name="mark_12" min="0" max="100" required>
+
+            <label>Department:</label><br>
+            <input type="radio" name="department" value="BCom Fintech" required> BCom Fintech<br>
+            <input type="radio" name="department" value="BCA"> BCA<br>
+            <input type="radio" name="department" value="AI and ML"> AI and ML<br><br>
+
+            <label>Year:</label>
+            <select name="year" required>
+                <option value="">--Select Year--</option>
+                <option value="First Year">First Year</option>
+                <option value="Second Year">Second Year</option>
+                <option value="Final Year">Final Year</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
